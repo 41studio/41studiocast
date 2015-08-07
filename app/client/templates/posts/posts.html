@@ -1,0 +1,20 @@
+<template name="Posts">
+  <div class="posts">
+    {{#each posts}}
+      <div class="row">
+        <div class="col-sm-2 hidden-xs">
+          <img class="img-responsive" src="https://embed-ssl.wistia.com/deliveries/02c08e49372c455f842894da68eb80686c879dbb.jpg?image_crop_resized=400x240" alt="02c08e49372c455f842894da68eb80686c879dbb">
+        </div>
+
+        <div class="col-sm-9 col-xs-12">
+          <h3 style="margin-top:0px">{{title}}</h3>
+          <p class="text-muted">{{description}}</p>
+        </div>
+
+        <div class="col-sm-1 hidden-xs">
+          {{#linkTo route='editPost'}}<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>{{/linkTo}}
+        </div>
+      </div>  
+    {{/each}}
+  </div>
+</template>
