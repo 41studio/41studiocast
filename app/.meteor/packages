@@ -11,3 +11,10 @@ aldeed:collection2
 twbs:bootstrap
 bootswatch:flatly
 aldeed:delete-button
+dburles:collection-helpers
+accounts-base
+accounts-password
+alanning:roles
+fortawesome:fontawesome
+houston:admin
+mpowaga:autoform-summernote

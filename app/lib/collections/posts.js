@@ -23,14 +23,24 @@ Posts.attachSchema(new SimpleSchema({
     label: "Title",
     max: 100
   },
-  description: {
-    type: String,
-    label: "Description",
-    max: 500
-  },
   video_url: {
     type: String,
     label: "Video Url",
-    max: 500
+    max: 200
+  },
+  description: {
+    type: String,
+    label: "Description",
+    max: 500,
+    autoform: {
+      afFieldInput: {
+        type: "summernote",
+        rows: 7,
+        class: "editor",
+        settings: {
+          height: 300
+        }
+      }
+    }
   }
 }));
