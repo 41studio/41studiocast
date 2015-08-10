@@ -28,6 +28,14 @@ Posts.attachSchema(new SimpleSchema({
     label: "Video Url",
     max: 200
   },
+  tags: {
+    type: String,
+    label: "Tags",
+    max: 200,
+    autoform: {
+      type: 'tags'
+    }
+  },
   description: {
     type: String,
     label: "Description",
