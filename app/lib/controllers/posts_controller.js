@@ -24,7 +24,7 @@ PostsController = RouteController.extend({
   // return Posts.findOne({_id: this.params._id});
   
   data: function () {
-    return Posts.findOne({_id: this.params._id});
+    return Posts.findOne({slug: this.params.slug});
   },
   
   // You can provide any of the hook options
@@ -63,6 +63,10 @@ PostsController = RouteController.extend({
 
   edit: function(){
     this.render('EditPost', {});
+  },
+
+  show: function(){
+    this.render('Show', {});
   }
 
 });

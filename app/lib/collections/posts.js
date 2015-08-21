@@ -17,6 +17,15 @@ if (Meteor.isServer) {
   });
 }
 
+Posts.friendlySlugs(
+  {
+    slugFrom: 'title',
+    slugField: 'slug',
+    distinct: true,
+    updateSlug: true
+  }
+)
+
 Posts.attachSchema(new SimpleSchema({
   title: {
     type: String,
@@ -50,5 +59,9 @@ Posts.attachSchema(new SimpleSchema({
         }
       }
     }
+  },
+  slug: {
+    type: String,
+    optional: true
   }
 }));

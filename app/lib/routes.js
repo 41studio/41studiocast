@@ -29,3 +29,10 @@ Router.route('/posts/:_id/edit', {
   action: 'edit',
   where: 'client'
 });
+
+Router.route('/posts/:slug', {
+  name: 'showPost',
+  controller: 'PostsController',
+  action: 'show',
+  where: 'client'
+});

@@ -3,7 +3,9 @@
     {{#each posts}}
       <div class="row">
         <div class="col-sm-2 hidden-xs">
-          <img class="img-responsive" src="https://embed-ssl.wistia.com/deliveries/02c08e49372c455f842894da68eb80686c879dbb.jpg?image_crop_resized=400x240" alt="02c08e49372c455f842894da68eb80686c879dbb">
+          <a href="{{#with slug=slug paramOne=this.slug}}{{pathFor 'showPost'}}{{/with}}">
+            <img class="img-responsive" src="https://embed-ssl.wistia.com/deliveries/02c08e49372c455f842894da68eb80686c879dbb.jpg?image_crop_resized=400x240" alt="02c08e49372c455f842894da68eb80686c879dbb" />
+          </a>
         </div>
 
         <div class="col-sm-9 col-xs-12">
