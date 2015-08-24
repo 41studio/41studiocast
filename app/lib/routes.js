@@ -23,7 +23,7 @@ Router.route('/posts/create', {
   where: 'client'
 });
 
-Router.route('/posts/:_id/edit', {
+Router.route('/posts/:slug/edit', {
   name: 'editPost',
   controller: 'PostsController',
   action: 'edit',
