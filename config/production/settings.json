@@ -1,5 +1,8 @@
 {
   "public": {
+    "disqus": {
+      "shortname": "41studiocast"
+    }
   },
 
   "sample": "value"
