@@ -1,7 +1,16 @@
 Posts = new Mongo.Collection('posts');
 
-
 if (Meteor.isServer) {
+
+  Meteor.startup(function () {
+    if (Posts.find().count() === 0) {
+      Posts.insert({title: "41studio is hiring!", 
+        video_url: "http://www.youtube.com/embed/DokUjuZmpCE",
+        description: "41studio is hiring and hiring again"
+      })
+    }
+  });
+
   Posts.allow({
     insert: function (userId, doc) {
       return true;
@@ -41,6 +50,7 @@ Posts.attachSchema(new SimpleSchema({
     type: String,
     label: "Tags",
     max: 200,
+    optional: true,
     autoform: {
       type: 'tags'
     }
