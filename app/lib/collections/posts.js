@@ -7,7 +7,7 @@ if (Meteor.isServer) {
       Posts.insert({title: "41studio is hiring!", 
         video_url: "http://www.youtube.com/embed/DokUjuZmpCE",
         description: "41studio is hiring and hiring again"
-      })
+      });
     }
   });
 
@@ -73,5 +73,16 @@ Posts.attachSchema(new SimpleSchema({
   slug: {
     type: String,
     optional: true
+  },
+  image_cover: {
+    type: String,
+    optional: true,
+    autoform: {
+      afFieldInput: {
+        type: 'fileUpload',
+        collection: 'Images',
+        label: 'Choose file'
+      }
+    }
   }
 }));
