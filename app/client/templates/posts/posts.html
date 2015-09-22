@@ -1,5 +1,6 @@
 <template name="Posts">
   <div class="posts animated slideInLeft">
+    {{#linkTo route="createPost"}}Add new post{{/linkTo}}
     {{#each posts}}
       <div class="row">
         <div class="col-sm-2 hidden-xs">

@@ -11,9 +11,12 @@
         <a class="navbar-brand" href="/">41studioCast</a>
       </div>
       <div class="collapse navbar-collapse" id="navigationbar">
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav">
           <li>{{#linkTo route="home"}}Home{{/linkTo}}</li>
           <li>{{#linkTo route="posts"}}Posts{{/linkTo}}</li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          {{> loginButtons}}
         </ul>
       </div>
     </div>
