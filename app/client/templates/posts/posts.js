@@ -10,6 +10,9 @@ Template.Posts.events({
 Template.Posts.helpers({
   posts: function() {
     return Posts.find();
+  },
+  image: function(){
+    return Images.findOne({_id: this.image_cover});
   }
 });
 

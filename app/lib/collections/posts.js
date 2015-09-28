@@ -12,15 +12,15 @@ if (Meteor.isServer) {
   });
 
   Posts.allow({
-    insert: function (userId, doc) {
+    insert: function () {
       return true;
     },
 
-    update: function (userId, doc, fieldNames, modifier) {
+    update: function () {
       return true;
     },
 
-    remove: function (userId, doc) {
+    remove: function () {
       return true;
     }
   });
